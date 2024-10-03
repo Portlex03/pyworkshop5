@@ -10,8 +10,7 @@ def test_login_with_incorrect_data(page: Page) -> None:
 
     login_page = LoginPage(page)
     login_page.navigate(site_url)
-    login_page.enter_username(username)
-    login_page.enter_password(password)
+    login_page.login(username, password)
 
     message = "Epic sadface: Username and password \
         do not match any user in this service"
