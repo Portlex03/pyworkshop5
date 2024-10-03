@@ -1,16 +1,12 @@
-import os
-
-from dotenv import load_dotenv
 from playwright.sync_api import Page, expect
 
 from ..pages.login import LoginPage
 
 
 def test_login_with_incorrect_data(page: Page) -> None:
-    load_dotenv()
-    site_url = os.getenv("SITE_URL")
-    username = os.getenv("USER_LOGIN")
-    password = os.getenv("USER_PASSWORD_WRONG")
+    site_url = "https://www.saucedemo.com"
+    username = "standard_user"
+    password = "wrong_password"
 
     login_page = LoginPage(page)
     login_page.navigate(site_url)
