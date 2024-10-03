@@ -15,9 +15,8 @@ def test_adding_several_items_to_shopping_cart(page: Page) -> None:
     login_page.login(username, password)
 
     inventory_page = InventoryPage(page)
-    inventory_page.backpack_button.click()
-    inventory_page.tshirt_button.click()
-    inventory_page.fleece_jacket_button.click()
+    inventory_page.add_items_to_shopping_cart()
+    inventory_page.shopping_cart_link.click()
 
     cart_page = CartPage(page)
     expect(cart_page.cart_list).to_have_count(3)
