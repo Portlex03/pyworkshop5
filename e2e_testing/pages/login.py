@@ -12,11 +12,7 @@ class LoginPage:
     def navigate(self, url: str) -> None:
         self.page.goto(url)
 
-    def enter_username(self, username: str) -> None:
+    def login(self, username: str, password: str) -> None:
         self.login_field.fill(username)
-
-    def enter_password(self, password: str) -> None:
         self.password_field.fill(password)
-
-    def click_login_button(self) -> None:
         self.login_button.click()
