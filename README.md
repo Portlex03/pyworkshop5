@@ -35,3 +35,6 @@ pytest
 - adding several items to shopping cart
 
 - input correct data and making order
+
+### Report
+![alt text](img/report.png)
